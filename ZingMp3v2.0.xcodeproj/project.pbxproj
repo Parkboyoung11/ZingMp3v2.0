@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		333FBDBB1FDFCED700D06AC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333FBDBA1FDFCED700D06AC2 /* AppDelegate.swift */; };
-		333FBDBD1FDFCED700D06AC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333FBDBC1FDFCED700D06AC2 /* ViewController.swift */; };
 		333FBDC01FDFCED700D06AC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 333FBDBE1FDFCED700D06AC2 /* Main.storyboard */; };
 		333FBDC21FDFCED700D06AC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 333FBDC11FDFCED700D06AC2 /* Assets.xcassets */; };
 		333FBDC51FDFCED700D06AC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 333FBDC31FDFCED700D06AC2 /* LaunchScreen.storyboard */; };
+		333FBDCE1FDFD06700D06AC2 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333FBDCD1FDFD06700D06AC2 /* HomeController.swift */; };
+		333FBDD11FDFD1DD00D06AC2 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333FBDD01FDFD1DD00D06AC2 /* Extension.swift */; };
+		333FBDD81FDFD91100D06AC2 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333FBDD71FDFD91100D06AC2 /* ProfileController.swift */; };
+		333FBDDA1FDFDB6500D06AC2 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333FBDD91FDFDB6500D06AC2 /* SearchController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		333FBDB71FDFCED700D06AC2 /* ZingMp3v2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZingMp3v2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		333FBDBA1FDFCED700D06AC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		333FBDBC1FDFCED700D06AC2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		333FBDBF1FDFCED700D06AC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		333FBDC11FDFCED700D06AC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		333FBDC41FDFCED700D06AC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		333FBDC61FDFCED700D06AC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		333FBDCD1FDFD06700D06AC2 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		333FBDD01FDFD1DD00D06AC2 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		333FBDD71FDFD91100D06AC2 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		333FBDD91FDFDB6500D06AC2 /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,41 @@
 		333FBDB91FDFCED700D06AC2 /* ZingMp3v2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				333FBDD21FDFD48400D06AC2 /* View */,
+				333FBDCF1FDFD1CE00D06AC2 /* Helper */,
+				333FBDCC1FDFD05900D06AC2 /* Controller */,
 				333FBDBA1FDFCED700D06AC2 /* AppDelegate.swift */,
-				333FBDBC1FDFCED700D06AC2 /* ViewController.swift */,
 				333FBDBE1FDFCED700D06AC2 /* Main.storyboard */,
 				333FBDC11FDFCED700D06AC2 /* Assets.xcassets */,
 				333FBDC31FDFCED700D06AC2 /* LaunchScreen.storyboard */,
 				333FBDC61FDFCED700D06AC2 /* Info.plist */,
 			);
 			path = ZingMp3v2.0;
+			sourceTree = "<group>";
+		};
+		333FBDCC1FDFD05900D06AC2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				333FBDCD1FDFD06700D06AC2 /* HomeController.swift */,
+				333FBDD71FDFD91100D06AC2 /* ProfileController.swift */,
+				333FBDD91FDFDB6500D06AC2 /* SearchController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		333FBDCF1FDFD1CE00D06AC2 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				333FBDD01FDFD1DD00D06AC2 /* Extension.swift */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		333FBDD21FDFD48400D06AC2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +170,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				333FBDBD1FDFCED700D06AC2 /* ViewController.swift in Sources */,
+				333FBDD11FDFD1DD00D06AC2 /* Extension.swift in Sources */,
+				333FBDDA1FDFDB6500D06AC2 /* SearchController.swift in Sources */,
+				333FBDCE1FDFD06700D06AC2 /* HomeController.swift in Sources */,
 				333FBDBB1FDFCED700D06AC2 /* AppDelegate.swift in Sources */,
+				333FBDD81FDFD91100D06AC2 /* ProfileController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

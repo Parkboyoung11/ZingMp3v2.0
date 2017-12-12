@@ -15,8 +15,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        
+        let TabBarController = UITabBarController()
+        
+//        let HomeView = creatTabBarView(systemItem: UITabBarSystemItem.favorites, rootView: HomeController())
+        let SearchView = creatTabBarView(systemItem: UITabBarSystemItem.search, rootView: SearchController())
+        let ProfileView = creatTabBarView(systemItem: UITabBarSystemItem.contacts, rootView: ProfileController())
+        TabBarController.viewControllers = [SearchView, ProfileView]
+        
+        let viewNV = UINavigationController(rootViewController: TabBarController)
+        TabBarController.navigationController?.setNavigationBarHidden(true, animated: true)
+        window?.rootViewController = viewNV
+
         // Override point for customization after application launch.
         return true
+    }
+    
+    func creatTabBarView(systemItem : UITabBarSystemItem, rootView: UIViewController) -> UINavigationController {
+        let viewNV = UINavigationController(rootViewController: rootView)
+        viewNV.tabBarItem = UITabBarItem(tabBarSystemItem: systemItem, tag: 0)
+        return viewNV
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
